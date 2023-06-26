@@ -86,6 +86,7 @@
     }
     .middleSectionOfHeader.active {
       left: 0;
+      z-index: 2;
     }
 
     .hamburgerIcon {
@@ -103,7 +104,6 @@
     }
     .middleSectionOfHeader.active {
       left: 0;
-
       z-index: 2;
     }
     .rightSectionOFHeader {
