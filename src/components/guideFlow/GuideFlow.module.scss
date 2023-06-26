@@ -16,3 +16,21 @@
     font-weight: 500;
   }
 }
+@media (max-width: 550px) {
+  .modal {
+    margin-top: 30px;
+    width: 250px;
+    grid-template-columns: auto;
+  }
+  .subtitle {
+    font-size: 10px;
+  }
+  .span {
+    font-size: 10px;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+}

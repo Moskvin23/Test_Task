@@ -69,7 +69,7 @@ const TermsAndConditions = () => {
         <div dangerouslySetInnerHTML={{ __html: items }} />
       </div>
 
-      <div>
+      <div className={styles.button}>
         <Button
           disabled={buttonType === BUTTON_TYPES.DISABLED}
           type={buttonType}
