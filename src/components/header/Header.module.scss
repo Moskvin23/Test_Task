@@ -1,0 +1,108 @@
+@import "../../colors";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+  .middleSectionOfHeader {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    > div {
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        color: $color-primary;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .rightSectionOFHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .hamburgerIcon {
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+  }
+}
+
+.dropdownIcon {
+  color: $color-primary;
+  cursor: pointer;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 220px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    .middleSectionOfHeader {
+      font-size: 0.8rem;
+      gap: 20px;
+    }
+    .logo {
+      width: 180px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .container {
+    width: 80%;
+    .middleSectionOfHeader {
+      display: block;
+      background-color: $color-primary;
+      padding: 10px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      top: 0px;
+      font-size: 20px;
+      height: 100%;
+      width: 40%;
+      left: -100%;
+      transform: 0;
+      padding-top: 80px;
+      padding-left: 30px;
+      gap: 30px;
+      transition: all 0.4s ease-in-out;
+    }
+    .middleSectionOfHeader.active {
+      left: 0;
+    }
+
+    .hamburgerIcon {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    justify-content: space-between;
+    .middleSectionOfHeader {
+      display: flex;
+      flex-direction: column;
+    }
+    .rightSectionOFHeader {
+      display: none;
+    }
+  }
+}

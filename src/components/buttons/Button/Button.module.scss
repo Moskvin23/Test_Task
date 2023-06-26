@@ -1,0 +1,71 @@
+@import "../../../colors";
+.button {
+  font-weight: 600;
+  border: none;
+  background-color: $color-primary;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: $color-secondary;
+  padding: 15px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  max-height: 50px;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &_disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: #f7f7f7;
+    color: #e4e4e4;
+    .icon {
+      opacity: 0.1;
+    }
+  }
+  &_error {
+    cursor: pointer;
+    background-color: #f6f6f6;
+    color: #a8a8a8;
+    .icon {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &_default {
+    background-color: #cdcccc;
+    color: $color-text;
+    font-weight: 600;
+  }
+
+  &_primary {
+    color: $color-secondary;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &_default2 {
+    background-color: #ffffff;
+    color: $color-secondary;
+    font-weight: 600;
+  }
+  &_secondary {
+    background-color: $color-secondary;
+    color: $color-primary;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.icon {
+  width: 18px;
+  height: 18px;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
